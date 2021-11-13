@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EBDDAC16273FC370007FF978 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDDAC15273FC370007FF978 /* main.swift */; };
+		EBDDAC1D273FC5B2007FF978 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDDAC1C273FC5B2007FF978 /* ConsoleIO.swift */; };
+		EBDDAC1F273FC6EA007FF978 /* Panagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDDAC1E273FC6EA007FF978 /* Panagram.swift */; };
+		EBDDAC21273FC987007FF978 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDDAC20273FC987007FF978 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		EBDDAC12273FC370007FF978 /* Panagram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Panagram; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDDAC15273FC370007FF978 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EBDDAC1C273FC5B2007FF978 /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
+		EBDDAC1E273FC6EA007FF978 /* Panagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panagram.swift; sourceTree = "<group>"; };
+		EBDDAC20273FC987007FF978 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				EBDDAC15273FC370007FF978 /* main.swift */,
+				EBDDAC1C273FC5B2007FF978 /* ConsoleIO.swift */,
+				EBDDAC1E273FC6EA007FF978 /* Panagram.swift */,
+				EBDDAC20273FC987007FF978 /* StringExtension.swift */,
 			);
 			path = Panagram;
 			sourceTree = "<group>";
@@ -120,7 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDDAC21273FC987007FF978 /* StringExtension.swift in Sources */,
 				EBDDAC16273FC370007FF978 /* main.swift in Sources */,
+				EBDDAC1D273FC5B2007FF978 /* ConsoleIO.swift in Sources */,
+				EBDDAC1F273FC6EA007FF978 /* Panagram.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
