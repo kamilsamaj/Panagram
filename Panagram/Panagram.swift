@@ -33,16 +33,12 @@ class Panagram {
     let consoleIO = ConsoleIO()
     
     func staticMode() {
-        //1
         let argCount = CommandLine.argc
-        //2
         let argument = CommandLine.arguments[1]
-        //3
         let (option, value) = getOption(argument.substring(from: argument.index(argument.startIndex, offsetBy: 1)))
-        //1
+
         switch option {
         case .anagram:
-            //2
             if argCount != 4 {
                 if argCount > 4 {
                     consoleIO.writeMessage("Too many arguments for option \(option.rawValue)", to: .error)
@@ -51,7 +47,6 @@ class Panagram {
                 }
                 consoleIO.printUsage()
             } else {
-                //3
                 let first = CommandLine.arguments[2]
                 let second = CommandLine.arguments[3]
                 
@@ -62,7 +57,6 @@ class Panagram {
                 }
             }
         case .palindrome:
-            //4
             if argCount != 3 {
                 if argCount > 3 {
                     consoleIO.writeMessage("Too many arguments for option \(option.rawValue)", to: .error)
@@ -71,42 +65,33 @@ class Panagram {
                 }
                 consoleIO.printUsage()
             } else {
-                //5
                 let s = CommandLine.arguments[2]
                 let isPalindrome = s.isPalindrome()
                 consoleIO.writeMessage("\(s) is \(isPalindrome ? "" : "not ")a palindrome")
             }
-            //6
         case .help:
             consoleIO.printUsage()
         case .unknown, .quit:
-            //7
             consoleIO.writeMessage("Unknown option \(value)")
             consoleIO.printUsage()
         }
-        
-        
     }
     
     func interactiveMode() {
-        //1
         consoleIO.writeMessage("Welcome to Panagram. This program checks if an input string is an anagram or palindrome.")
-        //2
+
         var shouldQuit = false
         while !shouldQuit {
-            //3
             consoleIO.writeMessage("Type 'a' to check for anagrams or 'p' for palindromes type 'q' to quit.")
             let (option, value) = getOption(consoleIO.getInput())
             
             switch option {
             case .anagram:
-                //4
                 consoleIO.writeMessage("Type the first string:")
                 let first = consoleIO.getInput()
                 consoleIO.writeMessage("Type the second string:")
                 let second = consoleIO.getInput()
                 
-                //5
                 if first.isAnagramOf(second) {
                     consoleIO.writeMessage("\(second) is an anagram of \(first)")
                 } else {
@@ -120,10 +105,8 @@ class Panagram {
             case .quit:
                 shouldQuit = true
             default:
-                //6
                 consoleIO.writeMessage("Unknown option \(value)", to: .error)
             }
         }
     }
-    
 }
